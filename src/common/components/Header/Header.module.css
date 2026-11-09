@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  margin: 20px;
+}
+
+.active {
+  color: red;
+}
