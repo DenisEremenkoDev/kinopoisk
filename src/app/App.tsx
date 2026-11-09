@@ -1,3 +1,6 @@
+import { router } from '@/app/router.tsx';
+import { RouterProvider } from 'react-router-dom';
+
 export const App = () => {
-  return <h1>Kinopoisk</h1>;
+  return <RouterProvider router={router} />;
 };
