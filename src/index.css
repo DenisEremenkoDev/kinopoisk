@@ -1,3 +1,17 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --link-active: #01b4e4;
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --link-active: #90cea1;
+}
+
 body {
   margin: 0;
+  background: var(--bg);
+  color: var(--text);
 }
