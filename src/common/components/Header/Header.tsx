@@ -1,11 +1,21 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '@/assets/TMDB.svg';
 import s from './Header.module.css';
+import { useAppDispatch } from '@/common/hooks/useAppDispatch';
+import { selectThemeMode, toggleTheme } from '@/features/theme/themeSlice';
+import { useAppSelector } from '@/common/hooks/useAppSelector';
 
 const getLinksClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? `${s.link} ${s.active}` : s.link;
 
 export const Header = () => {
+  const mode = useAppSelector(selectThemeMode);
+  const dispatch = useAppDispatch();
+
+  const themeHandler = () => {
+    dispatch(toggleTheme());
+  };
+
   return (
     <header className={s.header}>
       <Link to="/">
@@ -55,7 +65,9 @@ export const Header = () => {
       </nav>
 
       <div>
-        <p>тема</p>
+        <button type={'button'} onClick={themeHandler}>
+          {mode === 'dark' ? 'light' : 'dark'}
+        </button>
       </div>
     </header>
   );
