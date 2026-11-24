@@ -1,4 +1,3 @@
-// src/common/utils/getImageUrl.ts
 type ImageSize = 'w200' | 'w500' | 'original';
 
 const BASE_URL = 'https://image.tmdb.org/t/p/';
