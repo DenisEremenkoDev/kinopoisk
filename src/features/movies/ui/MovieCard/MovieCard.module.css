@@ -1,15 +1,56 @@
-.red {
-  color: red;
-}
-.yellow {
-  color: yellow;
-}
-.green {
-  color: green;
+.card {
+  position: relative; /* чтобы рейтинг и сердечко позиционировались внутри карточки */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
 }
 
-.card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+.card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* бейдж рейтинга поверх постера */
+.red,
+.yellow,
+.green {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.red {
+  background: #d32f2f;
+}
+.yellow {
+  background: #f9a825;
+}
+.green {
+  background: #2e7d32;
+}
+
+/* кнопка-сердечко поверх постера */
+.card button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
